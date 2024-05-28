@@ -1,113 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contact Info</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Example</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-	<style>
-		body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-}
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
 
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-nav {
-    display: flex;
-    align-items: center;
-}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
 
-.nav-links li {
-    margin-left: 1.5rem;
-}
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-}
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-/* Hamburger menu styles */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+        .hamburger span {
+            background-color: #fff;
+            height: 3px;
+            width: 25px;
+            margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+        }
 
-.hamburger span {
-    background-color: #fff;
-    height: 3px;
-    width: 25px;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-}
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 4rem;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: #333;
+                padding: 1rem;
+                box-sizing: border-box;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 4rem;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: #333;
-        padding: 1rem;
-        box-sizing: border-box;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
+            .nav-links.show {
+                transform: translateX(0);
+            }
 
-    .nav-links.show {
-        transform: translateX(0);
-    }
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
 
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
+            .hamburger {
+                display: flex;
+            }
 
-    .hamburger {
-        display: flex;
-    }
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
 
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
 
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-	</style>
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    </style>
 </head>
 <body>
- 
-     <header>
-     	<nav>
+    <header>
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <nav>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -120,6 +122,21 @@ nav {
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-     </header>
+    </header>
+
+    <main>
+        <h1>Welcome to my website</h1>
+        <p>This is the content of the website.</p>
+    </main>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
