@@ -1,119 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Page</title>
-    <style>
-        /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ONE TWO</title>
+	<style>
+		header{
+			height: 10vh;
+			width: 100%;
+			background-color: #333;
+			color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+		}
+		.logo img{
+			max-height: 50px;
+		}
+		.hamburger{
+			display: none;
+			flex-direction: column;
+			cursor: pointer;
+			position: absolute;
+            top: 50%;
+            left: 7%;
+            transform: translate(-50%, -50%);
+		}
+		.hamburger span{
+			height: 3px;
+			width: 25px;
+			background-color: white;
+			margin-bottom: 5px;
+			transition: all 0.3s ease-in-out;
+			top: 50%;
+		}
+		ul{
+			display: flex;
+			list-style-type: none;
+		}
+		li{
+			margin: auto 15%;
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-        }
-
-        .logo img {
-            color: #fff;
-            max-height: 50px;
-           display: block;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin-left: 1.5rem;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Hamburger menu styles */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            background-color: #fff;
-            height: 3px;
-            width: 25px;
-            margin-bottom: 5px;
-            transition: all 0.3s ease-in-out;
-        }
-        h1{
-            text-align: center;
-        }
-        p{
-            text-align: center;
-            margin: 3%;
-        }
-        .container{
-  background-image: url("https://st.depositphotos.com/1008939/2261/i/450/depositphotos_22619283-stock-photo-shopping-woman.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  min-height: 40vh;
-  background-size: 100%;
-                   
-                }
-         
-               
-            }
-          .menu button{
-              background-color: yellow;
-              border: 1px solid white;
-              border-radius: 2em;
-              height: 3vh;
-              width: 5%;  
-              margin-right: 30px;
-              position: absolute;
-            }
-        .menu{
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end; 
-              position: relative;
-              background-size: cover;
-              background-position: center;
-        }
-        .button1 {
-  top: 20px;
-  right: 20px;
-}
-
-.button2 {
-  bottom: 20px;
-  right: 20px;
-}
-        
-
-        /* Media query for screens */
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
+		}
+		intro{
+			position: relative;
+		}
+		h1{
+			text-align: center;
+			margin: 10vh 0 3vh 0;
+			padding: 2vh;		
+		}
+		p{
+			width: 80%;
+			margin: 3vh auto;
+			font-size: 18px;
+		}
+		.container{
+			background-image: url("https://st.depositphotos.com/1008939/2261/i/450/depositphotos_22619283-stock-photo-shopping-woman.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			position: absolute;
+			left: 0;
+		}
+		.menu{
+			float: right;
+		}
+		button{
+			display: flex;
+			flex-direction: column;		
+			margin: 5vh 5em;
+			padding: 1em;
+			background-color: yellow;
+			border-radius: 2em;
+			border: 1px solid black;
+		}
+		@media(max-width: 768px){
+			.logo img{
+                position:absolute;
+                left: 44%;
+			}
+            ul{
+            	position: absolute;
                 top: 4rem;
                 left: 0;
                 width: 100%;
@@ -124,19 +93,15 @@
                 transform: translateX(-100%);
                 transition: transform 0.3s ease-in-out;
             }
-
-            .nav-links.show {
+            ul.show {
                 transform: translateX(0);
             }
-
-            .nav-links li {
+            ul li {
                 margin: 0.5rem 0;
             }
-
             .hamburger {
                 display: flex;
             }
-
             .hamburger.active span:nth-child(1) {
                 transform: translateY(8px) rotate(45deg);
             }
@@ -148,49 +113,49 @@
             .hamburger.active span:nth-child(3) {
                 transform: translateY(-8px) rotate(-45deg);
             }    
-        }
-    </style>
+		}
+
+	</style>
 </head>
 <body>
-    <header>
-        <div class="logo">
+	<header>
+		<div class="logo">
             <img src="https://t4.ftcdn.net/jpg/01/14/07/89/360_F_114078967_16B536qO2FnanuH1m5TGKrA4wKdkkyzc.jpg" alt="Logo">
         </div>
-        <nav>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Visual Vision</h1>
-        <p>Welcome to Visual Vision, where fashion and art converge to elevate your style.Discover cutting-edge pieces from both emerging and established designers, each one a unique work of wearable art. Our knowledgeable stylists are passionate about helping you craft a look that is distinctly you, blending timeless elegance with a bold, visionary spirit.Enjoy your Visual Vision experience where fashion fr creativity is limitless.</p>
-        <div class="container">
-            <div class="menu">
-                <button>Log In</button>
-                <button>Sign Up</button>
-            </div>
+        <div class="hamburger">
+        	<span></span>
+        	<span></span>
+        	<span></span>
         </div>
-    </main>
+		<ul>
+			<li>Home</li>
+			<li>List an Item</li>
+			<li>Search for an Item</li>
+			<li>Contact</li>
+
+		</ul>
+	</header>
+	<div class="intro">
+	   <h1>Visual Vision</h1>
+	   <p>Welcome to Visual Vision, where fashion and art converge to elevate your style.Discover cutting-edge pieces from both emerging and established designers, each one a unique work of wearable art. Our knowledgeable stylists are passionate about helping you craft a look that is distinctly you, blending timeless elegance with a bold, visionary spirit.Enjoy your Visual Vision experience where fashion fr creativity is limitless.</p>
+	</div>
+    <div class="container">
+    	<div class="menu">
+    	<button>Log In</button>
+    	<button>Sign Up</button>
+    	<button>About Us</button>
+    	</div>
+    </div>
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+    	 const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('ul');
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('show');
         });
     </script>
+
 </body>
 </html>
-    
