@@ -1,164 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ONE TWO</title>
-	<style>
-		header{
-			height: 10vh;
-			width: 100%;
-			background-color: #333;
-			color: white;
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: flex;
-		}
-		.logo img{
-			max-height: 10vh;
-		}
-		.hamburger{
-			display: none;
-			flex-direction: column;
-			cursor: pointer;
-			position: absolute;
-            top: 50%;
-            left: 7%;
-            transform: translate(-50%, -50%);
-		}
-		.hamburger span{
-			height: 3px;
-			width: 25px;
-			background-color: white;
-			margin-bottom: 5px;
-			transition: all 0.3s ease-in-out;
-			top: 50%;
-		}
-		ul{
-			display: flex;
-			
-			align-items: center;
-			list-style-type: none;
-		}
-		li{
-			margin: auto 2em;
+  <title>Vehicle Inspection System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-		}
-		intro{
-			position: relative;
-		}
-		h1{
-			text-align: center;
-			margin: 10vh 0 3vh 0;
-			padding: 2vh;		
-		}
-		p{
-			width: 80%;
-			margin: 3vh auto;
-			font-size: 18px;
-		}
-		.container{
-			background-image: url("https://st.depositphotos.com/1008939/2261/i/450/depositphotos_22619283-stock-photo-shopping-woman.jpg");
-			background-size: cover;
-			background-repeat: no-repeat;
-			width: 100%;
-			position: absolute;
-			left: 0;
-		}
-		.menu{
-			float: right;
-		}
-		button{
-			display: flex;
-			flex-direction: column;		
-			margin: 5vh 5em;
-			padding: 1em;
-			background-color: darkslategray;
-			border-radius: 2em;
-			border: 1px solid darkslategray;
-			color: white;
-		}
-		@media(max-width: 768px){
-			.logo img{
-                position:absolute;
-                left: 44%;
-			}
-            ul{
-            	position: absolute;
-                top: 4rem;
-                left: 0;
-                width: 100%;
-                flex-direction: column;
-                background-color: #333;
-                padding: 1rem;
-                box-sizing: border-box;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            ul.show {
-                transform: translateX(0);
-            }
-            ul li {
-                margin: 0.5rem 0;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .hamburger.active span:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
+    header {
+      background-color: black;
+      color: red;
+      padding: 20px;
+      text-align: center;
+    }
 
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
+    h1, h2 {
+      margin-top: 30px;
+    }
 
-            .hamburger.active span:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }    
-		}
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-	</style>
+    li {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+   .button {
+  position: relative;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+    button:hover {
+      background-color: #45a049;
+    }
+    fieldset{border-radius: 10PX;
+      margin: 2%;
+
+    }
+    .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.logo img {
+  max-height: 30px;
+  </style>
 </head>
 <body>
-	<header>
-		<div class="logo">
-            <img src="https://t4.ftcdn.net/jpg/01/14/07/89/360_F_114078967_16B536qO2FnanuH1m5TGKrA4wKdkkyzc.jpg" alt="Logo">
-        </div>
-        <div class="hamburger">
-        	<span></span>
-        	<span></span>
-        	<span></span>
-        </div>
-		<ul>
-			<li>Home</li>
-			<li>List an Item</li>
-			<li>Search for an Item</li>
-			<li>Contact</li>
+  <header>
+    <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Isuzu.svg/2560px-Isuzu.svg.png" alt="Logo">
+  </div>
+    <h1>VEHICLE INSPECTION SYSTEM</h1>
 
-		</ul>
-	</header>
-	<div class="intro">
-	   <h1>Visual Vision</h1>
-	   <p>Welcome to Visual Vision, where fashion and art converge to elevate your style.Discover cutting-edge pieces from both emerging and established designers, each one a unique work of wearable art. Our knowledgeable stylists are passionate about helping you craft a look that is distinctly you, blending timeless elegance with a bold, visionary spirit.Enjoy your Visual Vision experience where fashion fr creativity is limitless.</p>
-	</div>
-    <div class="container">
-    	<div class="menu">
-    	<button>Log In</button>
-    	<button>Sign Up</button>
-    	<button>About Us</button>
-    	</div>
-    </div>
+  </header>
+  <fieldset>
+<fieldset>
+  <h2>Driver Compliance</h2>
+  <ul>
+    <li>Full Protective gear <input type="checkbox" id="gear"></li>
+    <li>Comment:<input type="text"></li>
+    <li>Substance use/ soberness <input type="checkbox" id="substance_use"></li>
+    <li> Comment:<input type="text"></li>
+    <li>Code of conduct/ etiquette <input type="checkbox" id="conduct"></li>
+    <li> Comment:<input type="text"></li>
+  </ul>
+</fieldset>
+<fieldset>
+  <h2>Vehicle Details</h2>
+  <ul>
+    <li>Truck Reg. Number: <input type="text" id="trucknumber" required></li>
+    <li>Supplier name: <input type="text" id="supplier_name" required></li>
+    <li>Service status: <input type="text" id="service_status" required></li>
+    <li>Insurance status: <input type="text" id="insurance_status" required></li>
+    <li>Container seal status: <input type="text" id="container_seal_status" required></li>
+  </ul>
+</fieldset>
+<fieldset>
+  <h2>Vehicle Condition</h2>
+  <ul>
+    <li>Body structure: <textarea id="body_structure" required></textarea></li>
+    <li>Body mounting: <textarea id="body_mounting" required></textarea></li>
+    <li>Fifth wheel condition: <textarea id="wheel_condition" required></textarea></li>
+    <li>Twist locks coupling: <textarea id="twist_locks_coupling" required></textarea></li>
+  </ul>
+</fieldset>
+<fieldset>
+  <h2>Vehicle Systems</h2>
+  <ul>
+    <li>Check engine signs: <textarea id="engine_status" required></textarea></li>
+    <li>Steering functionality: <textarea id="steering_functionality" required></textarea></li>
+    <li>Fuel gauge reading: <textarea id="fuel_gauge" required></textarea></li>
+    <li>Brake condition: <textarea id="brake_condition" required></textarea></li>
+    <li>Tyre condition: <textarea id="tyre_condition" required></textarea></li>
+    <li>Tyre pressure: <textarea id="tyre_pressure" required></textarea></li>
+  </ul>
+</fieldset>
+<fieldset>
+  <h2>Vehicle Safety</h2>
+  <ul>
+    <li>Horn functionality: <input type="text" id="horn_functionality" required></li>
+    <li>Indicator lights: <input type="text" id="indicator_lights" required></li>
+    <li>Break lights: <input type="text" id="break_lights" required></li>
+    <li>Fuel leaks: <input type="text" id="fuel_leaks" required></li>
+    <li>Air leaks: <input type="text" id="air_leaks" required></li>
+  </ul>
+</fieldset>
+<fieldset>
+  <h2>Vehicle Accessories</h2>
+  <ul>
+    <li>First aid kit: <textarea id="kit" required></textarea></li>
+    <li>Fire extinguisher: <input type="text" id="fire_extinguisher" required></li>
+    <li>Wheel chocks: <input type="text" id="wheel_chocks" required></li>
+  </ul>
+</fieldset>
+<fieldset>
+  <h2>
+    Remarks: <input type="text" id="remarks">
+  </h2>
+</fieldset>
+ 
+</fieldset>
+ <button onclick="submitInspection()" class="button">Submit Inspection</button>
 
-    <script>
-    	 const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('ul');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('show');
-        });
-    </script>
-
+  <script>
+    function submitInspection() {
+      // Code to handle form submission and data processing
+      console.log("Vehicle Inspection Submitted");
+    }
+  </script>
 </body>
+<!--This System was developed by Eric Chweya,Geoffrey Sakora and Darren Wambugu.--> 
 </html>
